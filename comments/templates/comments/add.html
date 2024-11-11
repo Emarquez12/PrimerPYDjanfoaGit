@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add</title>
+</head>
+<body>
+    <h1>Pagina para agregar</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo beatae adipisci dolorum officiis modi tempore labore aperiam obcaecati rem. Quo ab dolore itaque maiores numquam adipisci sed dolores, omnis veritatis.</p>
+    <p>
+    {{ data.autor }}
+    </p>
+    <p>El Año: {{data.year}}, el mes: {{data.month}}, el dia: {{data.day}}</p>
+
+    {% comment %} <form action="{% url 'comments:add' %}" method="POST"> 
+        <label for="">Text:</label>
+        <textarea required name="text"></textarea>
+        {% csrf_token %}
+        <button type="submit">Send</button>
+    </form> {% endcomment %}
+
+    
+    <form action="" method="POST"> 
+        {{ form.text }}
+        {% csrf_token %}
+        <button type="submit">Send</button>
+    </form>
+
+</body>
+</html>
